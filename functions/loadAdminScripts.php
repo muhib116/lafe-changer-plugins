@@ -3,9 +3,7 @@
 add_action('admin_enqueue_scripts', 'life_changer_enqueue_scripts');
 $manifest_path = plugin_dir_path(__DIR__) . 'dist/.vite/manifest.json';
 $manifest = json_decode(file_get_contents($manifest_path), true);
-
 $css_file_name = $manifest['src/main.ts']['css'][0] ?? null;
-
 
 function life_changer_enqueue_scripts($hook_suffix) {
     global $manifest;

@@ -15,6 +15,8 @@ require_once __DIR__ . '/functions/loadAdminScripts.php';
 // require_once __DIR__ . '/functions/wooCommerceExist.php';
 // require_once __DIR__ . '/functions/pluginUpdateNotice.php';
 
+require_once __DIR__ . '/functions/dashboard/index.php';
+
 // Handle AJAX Request
 add_action('wp_ajax_life_changer_fetch_data', 'life_changer_fetch_data');
 
@@ -33,3 +35,7 @@ function life_changer_fetch_data() {
 
     wp_send_json_success($data);
 }
+
+add_action('admin_footer_text', function () {
+    return ''; // Removes the footer text
+});

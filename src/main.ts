@@ -1,11 +1,10 @@
-import "./main.css";
+import { createApp } from "vue"
+import App from "./App.vue"
+import router from "./router"
 
-import { createApp } from "vue";
-import App from "./App.vue";
-import router from "./router";
+const app = createApp(App)
 
-const app = createApp(App);
+// Use the router
+app.use(router)
 
-app.use(router);
-
-app.mount("#life-changer-app");
+app.mount("#life-changer-app")
