@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.toplevel_page_life-changer :is(#wpcontent, #wpfooter) {
+    margin-left: 140px !important;
+  }
+  
+.toplevel_page_life-changer.folded :is(#wpcontent, #wpfooter) {
+    margin-left: 16px !important;
+}
