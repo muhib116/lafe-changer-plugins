@@ -13,7 +13,11 @@ function life_changer_add_menu() {
     );
 }
 
+require_once __DIR__ . '/dashboard/index.php';
 // Render Admin Page
 function life_changer_render_admin_page() {
-    echo '<div id="life-changer-app"></div>'; // Vue app container
+    echo '<div id="life-changer-app">
+
+
+    </div>'; // Vue app container
 }
